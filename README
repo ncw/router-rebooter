@@ -25,10 +25,10 @@ Find the external_addr with traceroute
 Crontab
 -------
 
-Now add the script onto your crontab (it can run as a user not root) something like this.  Edit your crontab by typing ```crontab -e``` and add lines like this
+Now add the script onto your crontab (it can run as a user not root) something like this.  Edit your crontab by typing "crontab -e" and add lines like this
 
     # Reboot the router if it has gone wrong
-    */5 * * * * /home/user/router_rebooter/router_rebooter.py >>/tmp/router_rebooter.log 2>&1
+    */5 * * * * /home/user/router-rebooter/router_rebooter.py >>/tmp/router_rebooter.log 2>&1
 
 Change the path as appropriate.
 
@@ -36,6 +36,11 @@ In Use
 ------
 
 This will check your ADSL line is up every 5 minutes and if it isn't it will reboot your router.
+
+Testing
+-------
+
+To test the script, change external_addr to something which definitely isn't reachable eg "1.1.1.1" (test first with ping!)
 
 License (Simplified BSD)
 ------------------------
@@ -67,4 +72,5 @@ Author
 
 Nick Craig-Wood
 nick@craig-wood.com
-<http://www.craig-wood.com/nick/>
+http://www.craig-wood.com/nick/
+https://github.com/ncw/router-rebooter
