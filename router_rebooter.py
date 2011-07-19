@@ -40,6 +40,7 @@ username = "admin"
 password = "routerpassword"     # the password for your router
 external_addr = "8.8.8.8"       # choose an external IP just at the other end of your ADSL connection
 EMAIL = "you@your-email-account.com" # email address for notifications
+mail_server = "localhost"            # address of SMTP server
 
 def send_email(email, message):
     """
@@ -50,7 +51,7 @@ def send_email(email, message):
     msg['Subject'] = message
     msg['From'] = email
     msg['To'] = email
-    s = smtplib.SMTP("localhost")
+    s = smtplib.SMTP(mail_server)
     s.sendmail(email, [email], msg.as_string())
     s.quit()
     print "Sent email"
