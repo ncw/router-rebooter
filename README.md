@@ -71,6 +71,9 @@ Author
 ------
 
 Nick Craig-Wood
+
 nick@craig-wood.com
+
 http://www.craig-wood.com/nick/
+
 https://github.com/ncw/router-rebooter
